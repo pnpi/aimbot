@@ -19,3 +19,5 @@ end
 function Framework.GetMouseLocation()
     return Vector2.new(Framework.UserInputService():GetMouseLocation().X, Framework.UserInputService():GetMouseLocation().Y)
 end
+
+return Framework
