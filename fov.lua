@@ -5,12 +5,12 @@ local FOV = Config.FOV
 local Debug = true
 
 if Debug then 
-  print(FOV.Color)
-  print(FOV.Filled)
-  print(FOV.Radius)
-  print(FOV.Visible)
-  print(FOV.Thickness)
-  print(FOV.Transparency)
+    print(FOV.Color)
+    print(FOV.Filled)
+    print(FOV.Radius)
+    print(FOV.Visible)
+    print(FOV.Thickness)
+    print(FOV.Transparency)
 end
 
 local FOV_Class = {}
@@ -62,8 +62,10 @@ function FOV_Class.onRenderStepped()
         FOV_Class.SetThickness()
         FOV_Class.SetTransparency()
     else
-      if Debug then 
-          print("Circle is nil, unable to set parameters.")
-      end
+        if Debug then 
+            print("Circle is nil, unable to set parameters.")
+        end
     end
 end
+
+return FOV_Class
