@@ -1,6 +1,5 @@
 local Get = loadstring(game:HttpGet("https://raw.githubusercontent.com/pnpi/aimbot/main/config.lua"))()
 local Config = getgenv().Config 
-local FOV = Config.FOV
 
 local Debug = true
 
@@ -14,42 +13,42 @@ if Debug then
 end
 
 local FOV_Class = {}
-
+FOV_Class.Config = Config.FOV
 FOV_Class.Circle = Drawing.new("Circle")
 
 function FOV_Class.SetColor()
     if FOV_Class.Circle then
-        FOV_Class.Circle.Color = FOV.Color
+        FOV_Class.Circle.Color = FOV_Class.Config.Color
     end
 end
 
 function FOV_Class.SetFilled()
     if FOV_Class.Circle then 
-        FOV_Class.Circle.Filled = FOV.Filled
+        FOV_Class.Circle.Filled = FOV_Class.Config.Filled
     end
 end
 
 function FOV_Class.SetRadius()
     if FOV_Class.Circle then 
-        FOV_Class.Circle.Radius = FOV.Radius
+        FOV_Class.Circle.Radius = FOV_Class.Config.Radius
     end
 end
 
 function FOV_Class.SetVisible()
     if FOV_Class.Circle then 
-        FOV_Class.Circle.Visible = FOV.Visible
+        FOV_Class.Circle.Visible = FOV_Class.Config.Visible
     end
 end
 
 function FOV_Class.SetThickness()
     if FOV_Class.Circle then 
-        FOV_Class.Circle.Thickness = FOV.Thickness
+        FOV_Class.Circle.Thickness = FOV_Class.Config.Thickness
     end 
 end
 
 function FOV_Class.SetTransparency()
     if FOV_Class.Circle then 
-        FOV_Class.Circle.Transparency = FOV.Transparency
+        FOV_Class.Circle.Transparency = FOV_Class.Config.Transparency
     end
 end
 
